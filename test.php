@@ -4,7 +4,7 @@ if( isset( $_POST['Login']) && ($_POST['Login']!="")) {
     $pass = $_POST[ 'password' ];
     $pass = bcrypt( $pass );
     $base = mysqli_connect('localhost', 'root', 'motdepasserobuste', 'test');
-    $query  = mysqli_fetch_assoc(mysqli_query($base, "SELECT * FROM `utilisateurs` WHERE `email` = '". $user."'"));
+    # $query  = mysqli_fetch_assoc(mysqli_query($base, "SELECT * FROM `utilisateurs` WHERE `email` = '". $user."'"));
     print_r($query);
     if($query){
         $passwordUser = $query["password"];
