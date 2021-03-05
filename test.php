@@ -3,7 +3,7 @@ if( isset( $_POST['Login']) && ($_POST['Login']!="")) {
     $user = $_POST[ 'username' ];
     $pass = $_POST[ 'password' ];
     $pass = bcrypt( $pass );
-    $base = mysqli_connect('localhost', 'root', 'motdepasserobuste', 'test');
+    # $base = mysqli_connect('localhost', 'root', 'motdepasserobuste', 'test');
     # $query  = mysqli_fetch_assoc(mysqli_query($base, "SELECT * FROM `utilisateurs` WHERE `email` = '". $user."'"));
     print_r($query);
     if($query){
